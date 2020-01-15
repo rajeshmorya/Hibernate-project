@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 26, 2019 1:35:49 PM by Hibernate Tools 4.0.1.Final -->
+<hibernate-mapping>
+    <class name="Youaccount" table="youaccount" catalog="amazoneprime">
+        <id name="youacountid" type="int">
+            <column name="youacountid" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="accountsetting" class="Accountsetting" fetch="select">
+            <column name="accountsettingid_fk" />
+        </many-to-one>
+        <property name="youaccountname" type="string">
+            <column name="youaccountname" />
+        </property>
+        <set name="youdetails" table="youdetail" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="youaccount_fk" />
+            </key>
+            <one-to-many class="Youdetail" />
+        </set>
+        <set name="youpaymenthistories" table="youpaymenthistory" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="youaccount_fk1" />
+            </key>
+            <one-to-many class="Youpaymenthistory" />
+        </set>
+        <set name="primes" table="prime" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="youaccount_fk1" />
+            </key>
+            <one-to-many class="Prime" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+<session-factory>
+<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+<property name="connection.url">jdbc:mysql://localhost:3306/amazoneprime</property>
+<property name="connection.user">root</property>
+<property name="connection.password">root</property>
+
+<!-- <property name="format_sql">true</property> -->
+<property name="show_sql">true</property>
+<property name="dialet">org.hibernate.dialect.MYSQLDialect</property>
+<property name="hbm2ddl.auto">update</property>
+
+<mapping class="com.amazoneprime.User"/>
+<mapping class="com.amazoneprime.YourWatchList"/>
+<mapping class="com.amazoneprime.WatchlistDetail"/>
+<mapping class="com.amazoneprime.AccountSetting"/>
+<mapping class="com.amazoneprime.YourAccount"/>
+<mapping class="com.amazoneprime.YourDetail"/>
+<mapping class="com.amazoneprime.Prime"/>
+<mapping class="com.amazoneprime.YourPaymenHistory"/>
+<mapping class="com.amazoneprime.YourDevice"/>
+<mapping class="com.amazoneprime.Playback"/>
+<mapping class="com.amazoneprime.Autoplay"/>
+<mapping class="com.amazoneprime.ParentalControl"/>
+<mapping class="com.amazoneprime.PrimeVideopin"/>
+<mapping class="com.amazoneprime.Subtitle"/>
+<mapping class="com.amazoneprime.Subtitledetail"/>
+<mapping class="com.amazoneprime.RegisterDevice"/>
+<mapping class="com.amazoneprime.Language"/>
+<mapping class="com.amazoneprime.Websitelanguage"/>
+<mapping class="com.amazoneprime.WatchHistory"/>
+<mapping class="com.amazoneprime.Watchhistorydetail"/>
+<mapping class="com.amazoneprime.WatchAnywhere"/> 
+<mapping class="com.amazoneprime.watchanywheredetail"/>
+<mapping class="com.amazoneprime.Help"/>
+<mapping class="com.amazoneprime.HelpDetail"/>
+<mapping class="com.amazoneprime.SignOut"/>
+<mapping class="com.amazoneprime.Home"/>
+<mapping class="com.amazoneprime.Tv_shows"/>
+<mapping class="com.amazoneprime.Movies"/>
+<mapping class="com.amazoneprime.Kids"/>
+<mapping class="com.amazoneprime.Kids_familyMovie"/>
+<mapping class="com.amazoneprime.Kids_familyTV"/>
+<mapping class="com.amazoneprime.AmazoneOriginalKidsSeries"/>
+<mapping class="com.amazoneprime.ComedyMovies"/>
+<mapping class="com.amazoneprime.DramaMovie"/>
+<mapping class="com.amazoneprime.ThrillerMovie"/>
+<mapping class="com.amazoneprime.Action_AdventureTV"/>
+<mapping class="com.amazoneprime.ThrowbackTV"/>
+<mapping class="com.amazoneprime.TreandingTV"/>
+<mapping class="com.amazoneprime.Kids_familyMovieDetail"/>
+<mapping class="com.amazoneprime.Kids_familyMovieDetail"/>
+<mapping class="com.amazoneprime.Kids_familyTVdetail"/>
+<mapping class="com.amazoneprime.AmazoneOriginalkidsSeriesdetail"/>
+<mapping class="com.amazoneprime.ComedyMovieDetail"/>
+<mapping class="com.amazoneprime.DramaMovieDetail"/>
+<mapping class="com.amazoneprime.ThrillerMovieDetail"/>
+<mapping class="com.amazoneprime.Action_adventureTVDetail"/>
+<mapping class="com.amazoneprime.ThrowbackTVDetail"/>
+<mapping class="com.amazoneprime.TreandingTVDetail"/>
+
+
+
+</session-factory>
+</hibernate-configuration>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 26, 2019 1:10:26 PM by Hibernate Tools 4.0.1.Final -->
+<hibernate-mapping>
+    <class name="Youpaymenthistory" table="youpaymenthistory" catalog="amazoneprime">
+        <id name="youpaymenthistoryid" type="int">
+            <column name="youpaymenthistoryid" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="youaccount" class="Youaccount" fetch="select">
+            <column name="youaccount_fk1" />
+        </many-to-one>
+        <property name="youpaymenthistoryname" type="string">
+            <column name="youpaymenthistoryname" />
+        </property>
+    </class>
+</hibernate-mapping>

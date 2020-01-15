@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 26, 2019 1:10:26 PM by Hibernate Tools 4.0.1.Final -->
+<hibernate-mapping>
+    <class name="Dramamoviedetail" table="dramamoviedetail" catalog="amazoneprime">
+        <id name="dramamoviedetailid" type="int">
+            <column name="dramamoviedetailid" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="dramamovie" class="Dramamovie" fetch="select">
+            <column name="dramamoviesid_fk" />
+        </many-to-one>
+        <property name="dramamoviedetailname" type="string">
+            <column name="dramamoviedetailname" />
+        </property>
+    </class>
+</hibernate-mapping>

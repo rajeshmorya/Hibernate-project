@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 26, 2019 1:10:26 PM by Hibernate Tools 4.0.1.Final -->
+<hibernate-mapping>
+    <class name="Registerdevice" table="registerdevice" catalog="amazoneprime">
+        <id name="registerid" type="int">
+            <column name="registerid" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="youdevice" class="Youdevice" fetch="select">
+            <column name="yourdeviceid_fk" />
+        </many-to-one>
+        <property name="registername" type="string">
+            <column name="registername" />
+        </property>
+    </class>
+</hibernate-mapping>

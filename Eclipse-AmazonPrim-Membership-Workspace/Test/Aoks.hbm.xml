@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 26, 2019 1:10:26 PM by Hibernate Tools 4.0.1.Final -->
+<hibernate-mapping>
+    <class name="Aoks" table="aoks" catalog="amazoneprime">
+        <id name="aoksid" type="int">
+            <column name="aoksid" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="kids" class="Kids" fetch="select">
+            <column name="kidsid_fk" />
+        </many-to-one>
+        <many-to-one name="home" class="Home" fetch="select">
+            <column name="homeid_fk" />
+        </many-to-one>
+        <property name="aoksname" type="string">
+            <column name="aoksname" />
+        </property>
+        <set name="amazoneseriesdetails" table="amazoneseriesdetail" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="aoksid_fk" />
+            </key>
+            <one-to-many class="Amazoneseriesdetail" />
+        </set>
+    </class>
+</hibernate-mapping>

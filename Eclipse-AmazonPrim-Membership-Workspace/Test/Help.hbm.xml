@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 26, 2019 1:10:26 PM by Hibernate Tools 4.0.1.Final -->
+<hibernate-mapping>
+    <class name="Help" table="help" catalog="amazoneprime">
+        <id name="helpid" type="int">
+            <column name="helpid" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="user" class="User" fetch="select">
+            <column name="userid_fk" />
+        </many-to-one>
+        <property name="helpname" type="string">
+            <column name="helpname" />
+        </property>
+        <set name="helpdetails" table="helpdetail" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="helpid_fk" />
+            </key>
+            <one-to-many class="Helpdetail" />
+        </set>
+    </class>
+</hibernate-mapping>

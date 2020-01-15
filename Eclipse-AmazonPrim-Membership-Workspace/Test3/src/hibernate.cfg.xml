@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory name="">
+        <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.password">root</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/amazoneprime</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.default_entity_mode">pojo</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.search.autoregister_listeners">true</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.validator.apply_to_ddl">false</property>
+<!--         <mapping class="Youdetail" />
+        <mapping class="Throwbacktvdetail" />
+        <mapping class="Help" />
+        <mapping class="KidsFamilytv" />
+        <mapping class="Prime" />
+        <mapping class="User" />
+        <mapping class="Youwatchlist" />
+        <mapping class="Youdevice" />
+        <mapping class="Subtitledetail" />
+        <mapping class="Dramamovie" />
+        <mapping class="ActionAdventuretvdetail" />
+        <mapping class="Watchanywhere" />
+        <mapping class="Kidsfamilymoviedetail" />
+        <mapping class="Comedymoviedetail" />
+        <mapping class="Youpaymenthistory" />
+        <mapping class="Watchhistorydetail" />
+        <mapping class="Watchanywheredetail" />
+        <mapping class="Registerdevice" />
+        <mapping class="Accountsetting" />
+        <mapping class="Amazoneseriesdetail" />
+        <mapping class="Language" />
+        <mapping class="Watchdetail" />
+        <mapping class="Primevideopin" />
+        <mapping class="Comedymovie" />
+        <mapping class="Home" />
+        <mapping class="Signout" />
+        <mapping class="Movie" />
+        <mapping class="Treanding" />
+        <mapping class="KidsFamily" />
+        <mapping class="Playback" />
+        <mapping class="Accountsetting1" />
+        <mapping class="Thrillermovie" />
+        <mapping class="Aoks" />
+        <mapping class="Autoplay" />
+        <mapping class="Kids" />
+        <mapping class="Dramamoviedetail" />
+        <mapping class="KidsFamilytvdetail" />
+        <mapping class="Subtitle" />
+        <mapping class="Parentalcontrol" />
+        <mapping class="Throwback" />
+        <mapping class="Actionadventure" />
+        <mapping class="Treandingtvdetail" />
+        <mapping class="Helpdetail" />
+        <mapping class="Watchhistory" />
+        <mapping class="Thrillermoviedetail" />
+        <mapping class="Weblanguage" />
+        <mapping class="TvShows" />
+        <mapping class="Youaccount" /> -->
+    </session-factory>
+</hibernate-configuration>

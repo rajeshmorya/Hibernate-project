@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 26, 2019 2:40:41 PM by Hibernate Tools 5.3.0.Beta2 --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="amazoneprime" dynamic-insert="false" dynamic-update="false" mutable="true" name="Home" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="home">
+        <id name="homeid" type="int">
+            <column name="homeid"/>
+            <generator class="assigned"/>
+        </id>
+        <many-to-one class="User" embed-xml="true" fetch="select" insert="true" name="user" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="userid_fk"/>
+        </many-to-one>
+        <property generated="never" lazy="false" name="homename" optimistic-lock="true" type="string" unique="false">
+            <column name="homename"/>
+        </property>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="kidsFamilies" optimistic-lock="true" sort="unsorted" table="kids_family">
+            <key on-delete="noaction">
+                <column name="homeid_fk"/>
+            </key>
+            <one-to-many class="KidsFamily" embed-xml="true" not-found="exception"/>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="dramamovies" optimistic-lock="true" sort="unsorted" table="dramamovie">
+            <key on-delete="noaction">
+                <column name="homeid_fk"/>
+            </key>
+            <one-to-many class="Dramamovie" embed-xml="true" not-found="exception"/>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="throwbacks" optimistic-lock="true" sort="unsorted" table="throwback">
+            <key on-delete="noaction">
+                <column name="homeid_fk"/>
+            </key>
+            <one-to-many class="Throwback" embed-xml="true" not-found="exception"/>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="actionadventures" optimistic-lock="true" sort="unsorted" table="actionadventure">
+            <key on-delete="noaction">
+                <column name="homeid_fk"/>
+            </key>
+            <one-to-many class="Actionadventure" embed-xml="true" not-found="exception"/>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="comedymovies" optimistic-lock="true" sort="unsorted" table="comedymovie">
+            <key on-delete="noaction">
+                <column name="homeid_fk"/>
+            </key>
+            <one-to-many class="Comedymovie" embed-xml="true" not-found="exception"/>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="aokses" optimistic-lock="true" sort="unsorted" table="aoks">
+            <key on-delete="noaction">
+                <column name="homeid_fk"/>
+            </key>
+            <one-to-many class="Aoks" embed-xml="true" not-found="exception"/>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="treandings" optimistic-lock="true" sort="unsorted" table="treanding">
+            <key on-delete="noaction">
+                <column name="homeid_fk"/>
+            </key>
+            <one-to-many class="Treanding" embed-xml="true" not-found="exception"/>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="thrillermovies" optimistic-lock="true" sort="unsorted" table="thrillermovie">
+            <key on-delete="noaction">
+                <column name="homeid_fk"/>
+            </key>
+            <one-to-many class="Thrillermovie" embed-xml="true" not-found="exception"/>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="kidsFamilytvs" optimistic-lock="true" sort="unsorted" table="kids_familytv">
+            <key on-delete="noaction">
+                <column name="homeid_fk"/>
+            </key>
+            <one-to-many class="KidsFamilytv" embed-xml="true" not-found="exception"/>
+        </set>
+    </class>
+</hibernate-mapping>

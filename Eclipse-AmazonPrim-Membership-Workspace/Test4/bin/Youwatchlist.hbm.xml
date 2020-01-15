@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 26, 2019 2:40:41 PM by Hibernate Tools 5.3.0.Beta2 --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="amazoneprime" dynamic-insert="false" dynamic-update="false" mutable="true" name="Youwatchlist" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="youwatchlist">
+        <id name="ywlid" type="int">
+            <column name="ywlid"/>
+            <generator class="assigned"/>
+        </id>
+        <many-to-one class="User" embed-xml="true" fetch="select" insert="true" name="user" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="userid_fk"/>
+        </many-to-one>
+        <property generated="never" lazy="false" name="ywlname" optimistic-lock="true" type="string" unique="false">
+            <column name="ywlname"/>
+        </property>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="watchdetails" optimistic-lock="true" sort="unsorted" table="watchdetail">
+            <key on-delete="noaction">
+                <column name="watchlistid_fk"/>
+            </key>
+            <one-to-many class="Watchdetail" embed-xml="true" not-found="exception"/>
+        </set>
+    </class>
+</hibernate-mapping>

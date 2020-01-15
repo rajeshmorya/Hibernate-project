@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 26, 2019 2:40:41 PM by Hibernate Tools 5.3.0.Beta2 --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="amazoneprime" dynamic-insert="false" dynamic-update="false" mutable="true" name="User" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="user">
+        <id name="uid" type="int">
+            <column name="uid"/>
+            <generator class="assigned"/>
+        </id>
+        <property generated="never" lazy="false" name="uname" optimistic-lock="true" type="string" unique="false">
+            <column name="uname"/>
+        </property>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="kidses" optimistic-lock="true" sort="unsorted" table="kids">
+            <key on-delete="noaction">
+                <column name="userid_fk"/>
+            </key>
+            <one-to-many class="Kids" embed-xml="true" not-found="exception"/>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="youwatchlists" optimistic-lock="true" sort="unsorted" table="youwatchlist">
+            <key on-delete="noaction">
+                <column name="userid_fk"/>
+            </key>
+            <one-to-many class="Youwatchlist" embed-xml="true" not-found="exception"/>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="watchanywheres" optimistic-lock="true" sort="unsorted" table="watchanywhere">
+            <key on-delete="noaction">
+                <column name="userid_fk"/>
+            </key>
+            <one-to-many class="Watchanywhere" embed-xml="true" not-found="exception"/>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="tvShowses" optimistic-lock="true" sort="unsorted" table="tv_shows">
+            <key on-delete="noaction">
+                <column name="userid_fk"/>
+            </key>
+            <one-to-many class="TvShows" embed-xml="true" not-found="exception"/>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="homes" optimistic-lock="true" sort="unsorted" table="home">
+            <key on-delete="noaction">
+                <column name="userid_fk"/>
+            </key>
+            <one-to-many class="Home" embed-xml="true" not-found="exception"/>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="signouts" optimistic-lock="true" sort="unsorted" table="signout">
+            <key on-delete="noaction">
+                <column name="userid_fk"/>
+            </key>
+            <one-to-many class="Signout" embed-xml="true" not-found="exception"/>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="helps" optimistic-lock="true" sort="unsorted" table="help">
+            <key on-delete="noaction">
+                <column name="userid_fk"/>
+            </key>
+            <one-to-many class="Help" embed-xml="true" not-found="exception"/>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="movies" optimistic-lock="true" sort="unsorted" table="movie">
+            <key on-delete="noaction">
+                <column name="userid_fk"/>
+            </key>
+            <one-to-many class="Movie" embed-xml="true" not-found="exception"/>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="accountsettings" optimistic-lock="true" sort="unsorted" table="accountsetting">
+            <key on-delete="noaction">
+                <column name="userid_fk"/>
+            </key>
+            <one-to-many class="Accountsetting" embed-xml="true" not-found="exception"/>
+        </set>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="accountsetting1s" optimistic-lock="true" sort="unsorted" table="accountsetting1">
+            <key on-delete="noaction">
+                <column name="userid_fk"/>
+            </key>
+            <one-to-many class="Accountsetting1" embed-xml="true" not-found="exception"/>
+        </set>
+    </class>
+</hibernate-mapping>

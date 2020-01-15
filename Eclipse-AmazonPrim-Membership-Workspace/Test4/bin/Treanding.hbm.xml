@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 26, 2019 2:40:41 PM by Hibernate Tools 5.3.0.Beta2 --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="amazoneprime" dynamic-insert="false" dynamic-update="false" mutable="true" name="Treanding" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="treanding">
+        <id name="treandingtvid" type="int">
+            <column name="treandingtvid"/>
+            <generator class="assigned"/>
+        </id>
+        <many-to-one class="Home" embed-xml="true" fetch="select" insert="true" name="home" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="homeid_fk"/>
+        </many-to-one>
+        <many-to-one class="TvShows" embed-xml="true" fetch="select" insert="true" name="tvShows" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="tvshowid_fk"/>
+        </many-to-one>
+        <property generated="never" lazy="false" name="treandingtvname" optimistic-lock="true" type="string" unique="false">
+            <column name="treandingtvname"/>
+        </property>
+        <set embed-xml="true" fetch="select" inverse="true" lazy="true" mutable="true" name="treandingtvdetails" optimistic-lock="true" sort="unsorted" table="treandingtvdetail">
+            <key on-delete="noaction">
+                <column name="treandingtvid_fk"/>
+            </key>
+            <one-to-many class="Treandingtvdetail" embed-xml="true" not-found="exception"/>
+        </set>
+    </class>
+</hibernate-mapping>

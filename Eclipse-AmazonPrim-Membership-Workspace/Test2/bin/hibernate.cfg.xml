@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory name="">
+        <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.password">root</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/amazoneprime</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.default_entity_mode">pojo</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.search.autoregister_listeners">true</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.validator.apply_to_ddl">false</property>
+        <mapping resource="Youdetail.hbm.xml" />
+        <mapping resource="Throwbacktvdetail.hbm.xml" />
+        <mapping resource="Help.hbm.xml" />
+        <mapping resource="KidsFamilytv.hbm.xml" />
+        <mapping resource="Prime.hbm.xml" />
+        <mapping resource="User.hbm.xml" />
+        <mapping resource="Youwatchlist.hbm.xml" />
+        <mapping resource="Youdevice.hbm.xml" />
+        <mapping resource="Subtitledetail.hbm.xml" />
+        <mapping resource="Dramamovie.hbm.xml" />
+        <mapping resource="ActionAdventuretvdetail.hbm.xml" />
+        <mapping resource="Watchanywhere.hbm.xml" />
+        <mapping resource="Kidsfamilymoviedetail.hbm.xml" />
+        <mapping resource="Comedymoviedetail.hbm.xml" />
+        <mapping resource="Youpaymenthistory.hbm.xml" />
+        <mapping resource="Watchhistorydetail.hbm.xml" />
+        <mapping resource="Watchanywheredetail.hbm.xml" />
+        <mapping resource="Registerdevice.hbm.xml" />
+        <mapping resource="Accountsetting.hbm.xml" />
+        <mapping resource="Amazoneseriesdetail.hbm.xml" />
+        <mapping resource="Language.hbm.xml" />
+        <mapping resource="Watchdetail.hbm.xml" />
+        <mapping resource="Primevideopin.hbm.xml" />
+        <mapping resource="Comedymovie.hbm.xml" />
+        <mapping resource="Home.hbm.xml" />
+        <mapping resource="Signout.hbm.xml" />
+        <mapping resource="Movie.hbm.xml" />
+        <mapping resource="Treanding.hbm.xml" />
+        <mapping resource="KidsFamily.hbm.xml" />
+        <mapping resource="Playback.hbm.xml" />
+        <mapping resource="Accountsetting1.hbm.xml" />
+        <mapping resource="Thrillermovie.hbm.xml" />
+        <mapping resource="Aoks.hbm.xml" />
+        <mapping resource="Autoplay.hbm.xml" />
+        <mapping resource="Kids.hbm.xml" />
+        <mapping resource="Dramamoviedetail.hbm.xml" />
+        <mapping resource="KidsFamilytvdetail.hbm.xml" />
+        <mapping resource="Subtitle.hbm.xml" />
+        <mapping resource="Parentalcontrol.hbm.xml" />
+        <mapping resource="Throwback.hbm.xml" />
+        <mapping resource="Actionadventure.hbm.xml" />
+        <mapping resource="Treandingtvdetail.hbm.xml" />
+        <mapping resource="Helpdetail.hbm.xml" />
+        <mapping resource="Watchhistory.hbm.xml" />
+        <mapping resource="Thrillermoviedetail.hbm.xml" />
+        <mapping resource="Weblanguage.hbm.xml" />
+        <mapping resource="TvShows.hbm.xml" />
+        <mapping resource="Youaccount.hbm.xml" />
+    </session-factory>
+</hibernate-configuration>

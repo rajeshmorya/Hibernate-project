@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Nov 26, 2019 2:40:41 PM by Hibernate Tools 5.3.0.Beta2 --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="amazoneprime" dynamic-insert="false" dynamic-update="false" mutable="true" name="Watchdetail" optimistic-lock="version" polymorphism="implicit" select-before-update="false" table="watchdetail">
+        <id name="watchlistid" type="int">
+            <column name="watchlistid"/>
+            <generator class="assigned"/>
+        </id>
+        <many-to-one class="Youwatchlist" embed-xml="true" fetch="select" insert="true" name="youwatchlist" not-found="exception" optimistic-lock="true" unique="false" update="true">
+            <column name="watchlistid_fk"/>
+        </many-to-one>
+        <property generated="never" lazy="false" name="listname" optimistic-lock="true" type="string" unique="false">
+            <column name="listname"/>
+        </property>
+    </class>
+</hibernate-mapping>

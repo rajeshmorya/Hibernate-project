@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 26, 2019 1:10:26 PM by Hibernate Tools 4.0.1.Final -->
+<hibernate-mapping>
+    <class name="Accountsetting" table="accountsetting" catalog="amazoneprime">
+        <id name="accountsettingid" type="int">
+            <column name="accountsettingid" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="user" class="User" fetch="select">
+            <column name="userid_fk" />
+        </many-to-one>
+        <property name="accountSettingname" type="string">
+            <column name="accountSettingname" />
+        </property>
+        <set name="watchhistories" table="watchhistory" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="accountsettingid_fk" />
+            </key>
+            <one-to-many class="Watchhistory" />
+        </set>
+        <set name="youdevices" table="youdevice" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="accountsettingid_fk" />
+            </key>
+            <one-to-many class="Youdevice" />
+        </set>
+        <set name="parentalcontrols" table="parentalcontrol" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="accountsettingid_fk" />
+            </key>
+            <one-to-many class="Parentalcontrol" />
+        </set>
+        <set name="languages" table="language" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="accountsettingid_fk" />
+            </key>
+            <one-to-many class="Language" />
+        </set>
+        <set name="subtitles" table="subtitle" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="accountsettingid_fk" />
+            </key>
+            <one-to-many class="Subtitle" />
+        </set>
+        <set name="playbacks" table="playback" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="accountsettingid_fk" />
+            </key>
+            <one-to-many class="Playback" />
+        </set>
+        <set name="youaccounts" table="youaccount" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="accountsettingid_fk" />
+            </key>
+            <one-to-many class="Youaccount" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 26, 2019 1:35:49 PM by Hibernate Tools 4.0.1.Final -->
+<hibernate-mapping>
+    <class name="KidsFamily" table="kids_family" catalog="amazoneprime">
+        <id name="kidsFamilyMovieid" type="int">
+            <column name="kids_familyMovieid" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="kids" class="Kids" fetch="select">
+            <column name="kidsid_fk" />
+        </many-to-one>
+        <many-to-one name="home" class="Home" fetch="select">
+            <column name="homeid_fk" />
+        </many-to-one>
+        <property name="kidsFamilyMoviename" type="string">
+            <column name="kids_familyMoviename" />
+        </property>
+        <set name="kidsfamilymoviedetails" table="kidsfamilymoviedetail" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="kids_familyMovieid_fk" />
+            </key>
+            <one-to-many class="Kidsfamilymoviedetail" />
+        </set>
+    </class>
+</hibernate-mapping>

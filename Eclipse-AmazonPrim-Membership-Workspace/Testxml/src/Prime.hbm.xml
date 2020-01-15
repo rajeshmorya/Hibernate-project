@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 26, 2019 1:35:49 PM by Hibernate Tools 4.0.1.Final -->
+<hibernate-mapping>
+    <class name="Prime" table="prime" catalog="amazoneprime">
+        <id name="primeid" type="int">
+            <column name="primeid" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="youaccount" class="Youaccount" fetch="select">
+            <column name="youaccount_fk1" />
+        </many-to-one>
+        <property name="primename" type="string">
+            <column name="primename" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.password">root</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/amazoneprime</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.default_entity_mode">pojo</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.search.autoregister_listeners">true</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.validator.apply_to_ddl">false</property>
+        <mapping class="ddv.Youwatchlist"/>
+         <mapping class="ddv.User"/>
+<!--         <mapping class="ddv.Watchanywhere"/>
+        <mapping class="ddv.Watchhistory"/>
+        <mapping class="ddv.Aoks"/>
+        <mapping class="ddv.KidsFamily"/>
+        <mapping class="ddv.ActionAdventuretvdetail"/>
+        <mapping class="ddv.Prime"/>
+        <mapping class="ddv.Subtitledetail"/>
+        <mapping class="ddv.KidsFamilytv"/>
+        <mapping class="ddv.Playback"/>
+       
+        <mapping class="ddv.KidsFamilytvdetail"/>
+        <mapping class="ddv.Parentalcontrol"/>
+        <mapping class="ddv.Movie"/>
+        <mapping class="ddv.Youdetail"/>
+        <mapping class="ddv.Registerdevice"/>
+        <mapping class="ddv.Subtitle"/>
+        <mapping class="ddv.Dramamovie"/>
+        <mapping class="ddv.Home"/>
+        <mapping class="ddv.Youdevice"/>
+        <mapping class="ddv.Actionadventure"/>
+        <mapping class="ddv.Amazoneseriesdetail"/>
+        <mapping class="ddv.Watchanywheredetail"/>
+        <mapping class="ddv.Kidsfamilymoviedetail"/>
+        <mapping class="ddv.Signout"/>
+        <mapping class="ddv.Thrillermovie"/>
+        <mapping class="ddv.Accountsetting"/>
+        <mapping class="ddv.Accountsetting1"/>
+        <mapping class="ddv.Treandingtvdetail"/>
+        <mapping class="ddv.Kids"/>
+        <mapping class="ddv.Comedymovie"/>
+        <mapping class="ddv.Comedymoviedetail"/>
+        <mapping class="ddv.Dramamoviedetail"/>
+        <mapping class="ddv.TvShows"/>
+        <mapping class="ddv.Youpaymenthistory"/>
+        <mapping class="ddv.Throwbacktvdetail"/>
+        <mapping class="ddv.Help"/>
+        <mapping class="ddv.Primevideopin"/>
+        <mapping class="ddv.Autoplay"/>
+        <mapping class="ddv.Weblanguage"/>
+        <mapping class="ddv.Thrillermoviedetail"/>
+        <mapping class="ddv.Watchdetail"/>
+        <mapping class="ddv.Watchhistorydetail"/>
+        <mapping class="ddv.Treanding"/>
+        <mapping class="ddv.Youaccount"/>
+        <mapping class="ddv.Helpdetail"/>
+        <mapping class="ddv.Throwback"/>
+        <mapping class="ddv.Language"/> -->
+    </session-factory>
+</hibernate-configuration>

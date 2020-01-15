@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 26, 2019 1:35:49 PM by Hibernate Tools 4.0.1.Final -->
+<hibernate-mapping>
+    <class name="User" table="user" catalog="amazoneprime">
+        <id name="uid" type="int">
+            <column name="uid" />
+            <generator class="assigned" />
+        </id>
+        <property name="uname" type="string">
+            <column name="uname" />
+        </property>
+        <set name="kidses" table="kids" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="userid_fk" />
+            </key>
+            <one-to-many class="Kids" />
+        </set>
+        <set name="youwatchlists" table="youwatchlist" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="userid_fk" />
+            </key>
+            <one-to-many class="Youwatchlist" />
+        </set>
+        <set name="watchanywheres" table="watchanywhere" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="userid_fk" />
+            </key>
+            <one-to-many class="Watchanywhere" />
+        </set>
+        <set name="tvShowses" table="tv_shows" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="userid_fk" />
+            </key>
+            <one-to-many class="TvShows" />
+        </set>
+        <set name="homes" table="home" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="userid_fk" />
+            </key>
+            <one-to-many class="Home" />
+        </set>
+        <set name="signouts" table="signout" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="userid_fk" />
+            </key>
+            <one-to-many class="Signout" />
+        </set>
+        <set name="helps" table="help" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="userid_fk" />
+            </key>
+            <one-to-many class="Help" />
+        </set>
+        <set name="movies" table="movie" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="userid_fk" />
+            </key>
+            <one-to-many class="Movie" />
+        </set>
+        <set name="accountsettings" table="accountsetting" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="userid_fk" />
+            </key>
+            <one-to-many class="Accountsetting" />
+        </set>
+        <set name="accountsetting1s" table="accountsetting1" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="userid_fk" />
+            </key>
+            <one-to-many class="Accountsetting1" />
+        </set>
+    </class>
+</hibernate-mapping>
